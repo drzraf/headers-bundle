@@ -22,7 +22,7 @@ class ResponseListenerTest extends TestCase
     private function createResponseEvent(
         ?Request $request = null,
         ?Response $response = null,
-        int $requestType = HttpKernelInterface::MASTER_REQUEST
+        int $requestType = HttpKernelInterface::MAIN_REQUEST
     ): ResponseEvent {
         return new ResponseEvent(
             $this->createMock(HttpKernelInterface::class),
